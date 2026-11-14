@@ -7,10 +7,10 @@ For active TradeX members only — sign in at https://tradex-members.web.app fir
 
 ## English
 
-TradeX User runs on **your own computer** (Mac or Windows) and places TradeX signals on **your own IBKR account**. It never sees your IBKR password: you sign in to IBKR yourself, and TradeX only talks to IB Gateway / TWS running on your computer.
+TradeX Desktop runs on **your own computer** (Mac or Windows) and places TradeX signals on **your own IBKR account**. It never sees your IBKR password: you sign in to IBKR yourself, and TradeX only talks to IB Gateway / TWS running on your computer.
 
 ### One-time setup
-Nothing to install except IBKR's own app — Python and everything TradeX needs is already inside this folder.
+Nothing to install except IBKR's own app — everything TradeX needs is already inside the app.
 
 1. **IB Gateway** (recommended) or TWS — https://www.interactivebrokers.com/en/trading/ibgateway-stable.php
 2. In IB Gateway: **Configure → Settings → API → Settings**
@@ -23,11 +23,11 @@ Nothing to install except IBKR's own app — Python and everything TradeX needs 
 
 ### Every trading day
 1. Open IB Gateway and log in (**paper** first is recommended).
-2. Start TradeX User:
-   - **Mac:** double-click `start.command`. If macOS says it can't be opened: **System Settings → Privacy & Security**, scroll down, click **Open Anyway** next to the blocked item, then start `start.command` again (repeat once if it asks again for `python3`).
-   - **Windows:** double-click `start.bat`. If SmartScreen appears: **More info → Run anyway**.
-3. The first time, enter your member email and the code it sends you. After that you stay signed in.
-4. Leave the window open during the session. Your status shows on the website.
+2. Open TradeX:
+   - **Mac:** double-click **TradeX** (drag it to Applications first if you like). The first time macOS says it can't verify it: click **Done**, then **System Settings → Privacy & Security**, scroll down, click **Open Anyway** → **Open**. Only needed once.
+   - **Windows:** double-click **TradeX.bat**. If SmartScreen appears: **More info → Run anyway**.
+3. The first time, enter your member email and the code it sends you in the TradeX window. After that you stay signed in.
+4. Keep the window open during the session. Four green lights = signed in, IB Gateway connected, TradeX signals online, auto-trading on.
 
 ### How it trades
 - **Entry:** a limit order near the live price — never a market order. It skips the trade if the price is more than 15% above the signal price or the spread is too wide.
@@ -35,16 +35,16 @@ Nothing to install except IBKR's own app — Python and everything TradeX needs 
 - **Exit, manual mode:** your own take-profit / stop-loss / trailing stop from the website.
 - **Safety net:** −50% hard stop, flat at 15:55 ET on expiry day, and your own rules if the central manager goes silent.
 
-Close it with **Ctrl+C**. Sign out: run `start.command --logout` (Mac) or `start.bat --logout` (Windows).
+Press **Stop** or close the window to stop. **Sign out** is at the bottom of the window.
 
 ---
 
 ## العربية
 
-يعمل TradeX User على **جهازك أنت** (ماك أو ويندوز) وينفّذ إشارات TradeX على **حسابك في IBKR**. لا يطّلع البرنامج على كلمة مرور IBKR أبداً: أنت تسجّل الدخول بنفسك، والبرنامج يتصل فقط بـ IB Gateway / TWS على جهازك.
+يعمل TradeX Desktop على **جهازك أنت** (ماك أو ويندوز) وينفّذ إشارات TradeX على **حسابك في IBKR**. لا يطّلع البرنامج على كلمة مرور IBKR أبداً: أنت تسجّل الدخول بنفسك، والبرنامج يتصل فقط بـ IB Gateway / TWS على جهازك.
 
 ### الإعداد لأول مرة
-لا تحتاج تثبيت أي شيء سوى برنامج IBKR نفسه — Python وكل ما يحتاجه TradeX موجود داخل هذا المجلد.
+لا تحتاج تثبيت أي شيء سوى برنامج IBKR نفسه — كل ما يحتاجه TradeX موجود داخل التطبيق.
 
 1. ثبّت **IB Gateway** (يُنصح به) أو TWS.
 2. في IB Gateway افتح: **Configure → Settings → API → Settings**
@@ -57,11 +57,11 @@ Close it with **Ctrl+C**. Sign out: run `start.command --logout` (Mac) or `start
 
 ### كل يوم تداول
 1. افتح IB Gateway وسجّل الدخول (يُنصح بالحساب **التجريبي** أولاً).
-2. شغّل البرنامج:
-   - **ماك:** انقر مرتين على `start.command`. إذا ظهرت رسالة أن الملف لا يمكن فتحه: افتح **إعدادات النظام ← الخصوصية والأمان**، انزل للأسفل واضغط **Open Anyway** بجانب العنصر المحظور، ثم شغّل `start.command` مرة أخرى (كرّر مرة إذا طلبها لـ `python3`).
-   - **ويندوز:** انقر مرتين على `start.bat`. إذا ظهرت رسالة SmartScreen: **More info ← Run anyway**.
-3. في المرة الأولى أدخل بريدك والرمز الذي يصلك، وبعدها يبقى الدخول محفوظاً.
-4. اترك النافذة مفتوحة طوال الجلسة، وستظهر حالتك في الموقع.
+2. افتح TradeX:
+   - **ماك:** انقر مرتين على **TradeX** (يمكنك سحبه إلى مجلد التطبيقات أولاً). في المرة الأولى سيقول النظام إنه لا يستطيع التحقق منه: اضغط **تم**، ثم **إعدادات النظام ← الخصوصية والأمان**، انزل للأسفل واضغط **Open Anyway** ← **Open**. مرة واحدة فقط.
+   - **ويندوز:** انقر مرتين على **TradeX.bat**. إذا ظهرت رسالة SmartScreen: **More info ← Run anyway**.
+3. في المرة الأولى أدخل بريدك والرمز الذي يصلك داخل نافذة TradeX، وبعدها يبقى الدخول محفوظاً.
+4. اترك النافذة مفتوحة طوال الجلسة. أربعة أضواء خضراء = تم الدخول، IB Gateway متصل، إشارات TradeX تعمل، التداول الآلي يعمل.
 
 ### طريقة التنفيذ
 - **الدخول:** أمر محدد السعر قريب من السعر الحالي، وليس أمراً بسعر السوق أبداً. يتجاوز البرنامج الصفقة إذا ارتفع السعر أكثر من 15% فوق سعر الإشارة أو كان الفارق واسعاً.
@@ -69,4 +69,4 @@ Close it with **Ctrl+C**. Sign out: run `start.command --logout` (Mac) or `start
 - **الخروج اليدوي:** هدف الربح ووقف الخسارة والوقف المتحرك الخاص بك من الموقع.
 - **شبكة الأمان:** وقف إجباري عند −50%، وإغلاق الصفقات الساعة 15:55 بتوقيت نيويورك في يوم الانتهاء، وتُطبَّق قواعدك أنت إذا توقف المدير المركزي عن الإرسال.
 
-للإيقاف اضغط **Ctrl+C**. لتسجيل الخروج: `start.command --logout` (ماك) أو `start.bat --logout` (ويندوز).
+للإيقاف اضغط **Stop** أو أغلق النافذة. **Sign out** في أسفل النافذة.
